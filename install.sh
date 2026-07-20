@@ -1,13 +1,4 @@
-
----
-
-### 2. `install.sh`
-
-```bash
-#!/bin/bash
-# Скрипт для установки всего софта после базовой установки Arch
-
-set -e  # прерывать при ошибке
+set -e
 
 echo "==> Обновление системы и установка базовых пакетов..."
 sudo pacman -Syu --noconfirm
@@ -24,10 +15,38 @@ else
 fi
 
 echo "==> Установка пакетов из официальных репозиториев..."
-sudo pacman -S --needed --noconfirm - < packages-repo.txt
+sudo pacman -S --needed --noconfirm \
+    base-devel git wget curl \
+    gcc gdb make cmake \
+    dotnet-sdk \
+    python python-pip python-virtualenv \
+    nodejs npm \
+    hyprland waybar wofi kitty thunar hyprpaper \
+    nwg-dock-hyprland wlogout \
+    nvidia-open-dkms nvidia-utils lib32-nvidia-utils nvidia-settings \
+    linux-headers \
+    networkmanager dhcpcd \
+    openssh htop btop neovim vim zsh \
+    ttf-jetbrains-mono-nerd ttf-dejavu ttf-liberation \
+    pavucontrol scilab octave maxima wxmaxima jupyter-notebook \
+    freecad qgis blender \
+    firefox telegram-desktop discord steam \
+    libreoffice-fresh
 
 echo "==> Установка пакетов из AUR..."
-yay -S --needed --noconfirm - < packages-aur.txt
+yay -S --needed --noconfirm \
+    visual-studio-code-bin \
+    pycharm-community-edition \
+    webstorm \
+    smath \
+    fritzing \
+    onlyoffice-bin \
+    wps-office \
+    arduino-ide-bin \
+    grimblast \
+    headsetcontrol \
+    swaync \
+    penguins-eggs
 
 echo "==> Установка Avalonia Templates..."
 dotnet new install Avalonia.Templates
