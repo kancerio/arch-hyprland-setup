@@ -30,7 +30,7 @@
 
 &#x20;  cd arch-hyprland-setup
 
-Ссылка на гугл диск с установшиками cisco и 1c
+Ссылка на гугл диск с установщиками cisco и 1c
 https://drive.google.com/drive/folders/1VoboBvm7MWLxQhZP9Jt5TYjAGaIddkL_?usp=sharing
 
 
