@@ -1,0 +1,12 @@
+visual-studio-code-bin
+pycharm-community-edition
+webstorm
+smath
+fritzing
+packettracer
+onlyoffice-bin
+wps-office
+arduino-ide-bin
+grimblast
+headsetcontrol
+swaync
