@@ -10,3 +10,5 @@ arduino-ide-bin
 grimblast
 headsetcontrol
 swaync
+wlogout
+hyprshot
